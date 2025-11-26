@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Safety-Constrained Deep Reinforcement Learning Control for Human-Robot Collaboration in Construction</title>
+  <title>Whole-process autonomous excavation using hierarchical planning and control with terrain-feedback</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.svg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -67,13 +67,15 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Safety-Constrained Deep Reinforcement Learning Control for Human-Robot Collaboration in Construction</h1>
+            <h1 class="title is-1 publication-title">Whole-process autonomous excavation using hierarchical planning and control with terrain-feedback</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://scholar.google.ca/citations?user=zSNg_ZMAAAAJ&hl=zh-CN" target="_blank">Kangkang Duan</a><sup>1</sup>,</span>
+                <a href="https://kangk906.github.io/" target="_blank">Kangkang Duan</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=-p51P1kAAAAJ&hl=en" target="_blank">Zhengbo Zou</a><sup>2</sup>
+                  <a href="https://www.civil.columbia.edu/content/zhengbo-zou" target="_blank">Zhengbo Zou</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                  <a href="https://civil.ubc.ca/tony-yang/" target="_blank">Tony Yang</a><sup>1</sup>,
                   </span>
                   </div>
 
@@ -86,7 +88,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://doi.org/10.1016/j.autcon.2025.106130" target="_blank"
+                        <a href="https://arxiv.org/" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -115,14 +117,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Worker safety has become an increasing concern in human-robot collaboration (HRC) due to potential hazards and risks introduced by robots. 
-            Deep Reinforcement Learning (DRL) has demonstrated to be efficient in training robots to acquire complex construction skills. 
-            However, neural network policies for collision avoidance lack theoretical safety guarantees and face challenges with out-of-distribution scenarios. 
-            This paper proposes a biomimetic safety-constrained DRL control system, inspired by vertebrate decision-making systems. 
-            A neural network policy serves as the "brain" for complex decision-making, while a reference governor layer functions like the spinal cord, 
-            enabling rapid responses to environmental stimuli and prioritizing safety. Theoretical safety guarantees related to robot dynamics including torque, 
-            joint angle, velocity, and distance were analyzed. Experimental results demonstrate that the proposed method achieves a 0% collision rate, providing 
-            a safe HRC mode in both static and dynamic construction scenarios.
+            Autonomous excavation robots are a promising way to address skilled labor shortages in construction. However, most prior work focuses on automating isolated digging cycles rather than closing the loop over the entire excavation process. This paper presents an autonomous excavation system that continuously adapts to the evolving terrain geometry. The system uses a hierarchical control framework that processes point cloud data from sensors and generates control commands to realize a desired terrain profile. The hierarchy consists of a global planner, a trajectory planner, and a high-rate tracking controller. The global planner uses an efficient weighted sampling strategy based on a novel soil convolution method for probability calculation. The trajectory planner improves excavated volume estimation within trajectory optimization by modeling bucket-soil interaction as a soil convolution process. Finally, a real-time tracking controller running at approximately 50Hz executes the planned trajectories while enforcing actuator and velocity constraints. Experiments demonstrate the computational efficiency, excavated volume estimation accuracy, multi-constraint satisfaction, and real-time tracking performance of the proposed system. The robot autonomously reshapes four different terrain types to match desired profiles, achieving an average surface error of 4mm.
           </p>
         </div>
       </div>
