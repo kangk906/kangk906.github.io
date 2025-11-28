@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Whole-process autonomous excavation using hierarchical planning and control with terrain-feedback</title>
+  <title>Hierarchical planning and control for autonomous excavation using terrain feedback</title>
   <link rel="icon" type="image/x-icon" href="static/images/icon.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -67,7 +67,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Whole-process autonomous excavation using hierarchical planning and control with terrain-feedback</h1>
+            <h1 class="title is-1 publication-title">Hierarchical planning and control for autonomous excavation using terrain feedback</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -117,7 +117,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Autonomous excavation robots are a promising way to address skilled labor shortages in construction. However, most prior work focuses on automating isolated digging cycles rather than closing the loop over the entire excavation process. This paper presents an autonomous excavation system that continuously adapts to the evolving terrain geometry. The system uses a hierarchical control framework that processes point cloud data from sensors and generates control commands to realize a desired terrain profile. The hierarchy consists of a global planner, a trajectory planner, and a high-rate tracking controller. The global planner uses an efficient weighted sampling strategy based on a novel soil convolution method for probability calculation. The trajectory planner improves excavated volume estimation within trajectory optimization by modeling bucket-soil interaction as a soil convolution process. Finally, a real-time tracking controller running at approximately 50Hz executes the planned trajectories while enforcing actuator and velocity constraints. Experiments demonstrate the computational efficiency, excavated volume estimation accuracy, multi-constraint satisfaction, and real-time tracking performance of the proposed system. The robot autonomously reshapes four different terrain types to match desired profiles, achieving an average surface error of 4mm.
+            Autonomous excavation robots are a promising way to address skilled labor shortages in construction. However, most prior work focuses on automating isolated digging cycles rather than closing the loop over the entire excavation process. This paper presents an autonomous excavation system that continuously adapts to the evolving terrain geometry. The system uses a hierarchical control framework that processes point cloud data from sensors and generates control commands to realize a desired terrain profile. The hierarchy consists of a global planner, a trajectory planner, and a high-rate tracking controller. Given the current and target terrain profiles, the global planner uses an efficient weighted sampling strategy to select excavation points. The trajectory planner takes these points as inputs and outputs the best dig trajectory. Finally, a real-time tracking controller running at approximately 50Hz executes the planned trajectory while enforcing actuator and velocity constraints. Experiments demonstrate the computational efficiency, excavated volume estimation accuracy, multi-constraint satisfaction, and real-time tracking performance of the proposed system. The robot autonomously reshapes four different terrain types to match desired profiles, achieving an average surface error of 4mm.
           </p>
         </div>
       </div>
